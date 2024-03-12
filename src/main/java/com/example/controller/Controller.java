@@ -18,7 +18,7 @@ public class Controller {
     }
 
     @GetMapping("/authenticated")
-    public String authenticated(Neo4jProperties.Authentication authentication) {
-        return "Привет аутентифицированный пользователь" + authentication.getUsername() + " " + authentication.getPassword();
+    public String authenticated(Authentication authentication) {
+        return "Привет аутентифицированный пользователь" + authentication.getName();
     }
 }

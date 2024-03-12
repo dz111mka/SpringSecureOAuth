@@ -26,7 +26,9 @@ public class SecureConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
-        http.oauth2Login(Customizer.withDefaults());
+        http.oauth2Login(auth -> {
+            auth.defaultSuccessUrl("/authenticated");
+        });
 
         return http
                 .authorizeHttpRequests(c -> c.requestMatchers("/error").permitAll()
