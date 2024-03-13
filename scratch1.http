@@ -1,5 +1,6 @@
+# @no-cookie-jar
 POST http://localhost:8080/realms/testRealm/protocol/openid-connect/token
 Content-Type: application/x-www-form-urlencoded
 
-client_id=springsecurity&client_secret=haX3SvrMhZxGyjPS3HsjeKqOlmA91fn7&username=dz111mka&password=password&grant_type=password
+client_id=springsecurity&client_secret=haX3SvrMhZxGyjPS3HsjeKqOlmA91fn7&username=ivan&password=ivan&grant_type=password
 
